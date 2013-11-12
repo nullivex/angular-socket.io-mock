@@ -75,7 +75,7 @@ test.js
 define(["chai","angular","angular-mocks","angular-socket-io"],function(chai){
   describe("Test Suite",function(){
     beforeEach(module("app"))
-    it("should be using the mock ng-socket.io",$inject(function($rootScope,$controller){
+    it("should be using the mock ng-socket.io",inject(function($rootScope,$controller){
       var expect = chai.expect
         , scope = $rootScope.$new()
         , ctrl = $controller("MyController",{$scope: scope})
@@ -94,7 +94,7 @@ define(["angular","ng-socket-io"],function(ng){
   app.controller("MyController",["$scope","socket",function($scope,socket){
     //load items now
     $scope.items = []
-    socket.emit("loadItems",function({},function(res){
+    socket.emit("loadItems",{},function(res){
       $scope.items = res.res
     })
     //setup functions
