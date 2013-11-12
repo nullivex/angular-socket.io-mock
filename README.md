@@ -1,8 +1,8 @@
 angular-socket.io-mock
 ======================
 
-Mock Socket.io bindings for AngularJS, useful for testing as a drop in replacement for btford/angular-socket-io
-which allows testing against a fake server.
+Mock Socket.io bindings for AngularJS, useful for testing as a drop in replacement for
+https://github.com/btford/angular-socket-io which allows testing against a fake server.
 
 ## Usage
 
@@ -102,5 +102,10 @@ define(["angular","ng-socket-io"],function(ng){
   }])
 })
 ```
+
+### Todo
+
+* Usage with sinon.js for spies
+* Mocking responses
 
 *Note* Please see https://github.com/btford/angular-socket-io for library usage.
