@@ -1,4 +1,4 @@
-angular-socket.io-mock
+angular-socket.io-mock [![Build Status](https://travis-ci.org/nullivex/angular-socket.io-mock.png?branch=master)](https://travis-ci.org/nullivex/angular-socket.io-mock)
 ======================
 
 Mock Socket.io bindings for AngularJS, useful for testing as a drop in replacement for
