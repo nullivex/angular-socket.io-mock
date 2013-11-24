@@ -13,7 +13,7 @@ module.exports = function(config){
     colors: true,
     logLevel: config.LOG_DEBUG,
     autoWatch: true,
-    browsers: ["PhantomJS","Firefox"],
+    browsers: ["PhantomJS"],
     captureTimeout: 60000,
     singleRun: false
   })
