@@ -4,8 +4,7 @@ node_js:
 
 before_script:
   - npm install -g karma
-  - karma start
 
 script:
-  - karma run
+  - karma start --no-auto-watch
 
