@@ -103,6 +103,55 @@ define(["angular","ng-socket-io"],function(ng){
 })
 ```
 
+### Example test using Jasmine
+Test.js
+```js
+describe('Controller: socketController', function () {
+
+    // load the controller's module
+    beforeEach(module('app'));
+
+    var socketController,
+      notify,
+      scope;
+
+    // Initialize the controller and a mock scope
+    beforeEach(inject(function ($controller, $rootScope, _notify_) {
+      scope = $rootScope.$new();
+      notify = _notify_;
+      socketController = $controller('socketController', {
+        $scope: scope
+      });
+
+    }));
+
+    it('The scope.items should change somehow', function() {
+      expect(scope.items.length).toEqual(0);
+      notify.receive('loadItems',{res: ['1','2','3']} )
+      expect(scope.items.length).toEqual(3);
+    });
+
+  });
+```
+
+```js
+'use strict';
+
+angular.module('app')
+  .controller('socketController', function ($scope, notify) {
+    // As first step to unit-test the socket, what we are
+    // going to do it is to try mocking an error, and changing
+    // a variable.
+    // This I hope it's easy enough to get started. It is not easy.
+
+
+    $scope.items = []
+    notify.on("loadItems", function(res){
+      $scope.items = res.res
+    });
+  });
+```
+
 ### Todo
 
 * Usage with sinon.js for spies
