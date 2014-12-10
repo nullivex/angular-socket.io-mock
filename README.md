@@ -158,3 +158,11 @@ angular.module('app')
 * Mocking responses
 
 *Note* Please see https://github.com/btford/angular-socket-io for library usage.
+
+## Changelog
+
+### 0.1.0
+* Fixed issue interface with the latest angular package.
+
+### 0.0.1
+* Initial Release
