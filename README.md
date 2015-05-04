@@ -161,6 +161,9 @@ angular.module('app')
 
 ## Changelog
 
+### 0.1.1
+* Add `once` support
+
 ### 0.1.0
 * Fixed issue interface with the latest angular package.
 

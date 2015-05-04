@@ -1,7 +1,7 @@
 {
   "name": "angular-socket.io-mock",
   "description": "Drop in Mock replacement for angular-socket-io",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     {
       "name": "Bryan Tong",
