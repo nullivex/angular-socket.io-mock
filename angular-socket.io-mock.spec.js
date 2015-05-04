@@ -6,6 +6,9 @@ describe('Angular Socket.io Mock',function(){
   it('should be able to listen on an event',inject(function(socketFactory){
     expect(socketFactory.on('test-event',function(){})).not.toBe(false)
   }))
+  it('should be able to listen once event',inject(function(socketFactory){
+    expect(socketFactory.once('test-event',function(){})).not.toBe(false)
+  }))
   it('should be able to emit an event',inject(function(socketFactory){
     expect(socketFactory.emit('test-event',{})).not.toBe(false)
   }))
