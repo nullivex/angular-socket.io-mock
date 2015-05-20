@@ -163,6 +163,7 @@ angular.module('app')
 
 ### 1.0.0
 * Upgraded to work with latest angular.
+* Use 0.1.0 with older versions of angularjs.
 
 ### 0.1.0
 * Fixed issue interface with the latest angular package.
