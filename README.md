@@ -161,6 +161,9 @@ angular.module('app')
 
 ## Changelog
 
+### 1.0.0
+* Upgraded to work with latest angular.
+
 ### 0.1.0
 * Fixed issue interface with the latest angular package.
 
