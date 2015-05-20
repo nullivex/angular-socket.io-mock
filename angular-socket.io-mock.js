@@ -13,6 +13,9 @@ ng.provider('socketFactory',function(){
         this.events[eventName].push(callback);
       };
 
+      // intercept 'once' calls and treat them as 'on'
+      obj.once = obj.on;
+      
       // intercept 'emit' calls from the client and record them to assert against in the test
       obj.emit = function(eventName){
         var args = Array.prototype.slice.call(arguments,1);
