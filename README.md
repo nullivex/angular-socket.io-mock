@@ -161,6 +161,9 @@ angular.module('app')
 
 ## Changelog
 
+### 1.1.0
+* Add `forward` support
+
 ### 1.0.0
 * Upgraded to work with latest angular.
 * Use 0.1.0 with older versions of angularjs.

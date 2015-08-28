@@ -1,7 +1,7 @@
 {
   "name": "angular-socket.io-mock",
   "description": "Drop in Mock replacement for angular-socket-io",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Bryan Tong",
@@ -9,6 +9,11 @@
       "homepage": "http://bryantong.com"
     }
   ],
+  "contributors": [{
+    "name": "Kamil Kisiela",
+    "email": "kamil.kisiela@ster-project.pl",
+    "homepage": "http://kamilkisiela.pl"
+  }],
   "keywords": [
     "angular",
     "socket.io",
