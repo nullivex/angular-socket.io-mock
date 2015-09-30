@@ -4,6 +4,6 @@
   "main": "./angular-socket.io-mock.js",
   "dependencies": {
     "angular": "~1.4.5",
-    "angular-socket-io": "~1.4.5"
+    "angular-socket-io": "~0.7.0"
   }
 }
