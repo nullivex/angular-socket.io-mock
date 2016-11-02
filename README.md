@@ -161,6 +161,11 @@ angular.module('app')
 
 ## Changelog
 
+### 1.2.0
+* Merge pull reuqest #10 adding a prefix and forward option
+* Update to latest dependencies
+* Publish on NPM
+
 ### 1.1.1
 * Add `forward` support
 

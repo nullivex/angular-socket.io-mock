@@ -1,9 +1,9 @@
 {
   "name": "angular-socket.io-mock",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": "./angular-socket.io-mock.js",
   "dependencies": {
-    "angular": "~1.4.5",
+    "angular": "~1.5.8",
     "angular-socket-io": "~0.7.0"
   }
 }
