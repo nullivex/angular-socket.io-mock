@@ -161,8 +161,10 @@ angular.module('app')
 
 ## Changelog
 
-### 1.1.0
+### 1.1.1
+* Add `forward` support
 
+### 1.1.0
 * .receive will acknowledge any .emit events with a callback as the last parameter
 
 ### 1.0.0

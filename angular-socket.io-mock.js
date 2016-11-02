@@ -1,8 +1,12 @@
 /* global angular: false */
 var ng = angular.module('btford.socket-io',[])
 ng.provider('socketFactory',function(){
+  var defaultPrefix = 'socket:';
   this.$get = function($rootScope){
-    return function socketFactory () {
+    return function socketFactory (options) {
+      options = options || {};
+      var prefix = options.prefix === undefined ? defaultPrefix : options.prefix;
+      var defaultScope = options.scope || $rootScope;
       var obj = {};
       obj.events = {};
       obj.emits = {};
@@ -23,6 +27,24 @@ ng.provider('socketFactory',function(){
         if(!this.emits[eventName])
           this.emits[eventName] = [];
         this.emits[eventName].push(args);
+      };
+
+      // when socket.on('someEvent', fn (data) { ... }),
+      // call scope.$broadcast('someEvent', data)
+      obj.forward = function (events, scope) {
+        var self = this;
+        if (events instanceof Array === false) {
+          events = [events];
+        }
+        if (!scope) {
+          scope = $rootScope;
+        }
+        events.forEach(function (eventName) {
+          var prefixedEvent = prefix + eventName;
+          obj.on(eventName, function (data) {
+            scope.$broadcast(prefixedEvent, data);
+          });
+        });
       };
 
       //simulate an inbound message to the socket from the server (only called from the test)
