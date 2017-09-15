@@ -161,8 +161,11 @@ angular.module('app')
 
 ## Changelog
 
+### 1.3.0
+* Merge pull request #14 adding entry point for package in `package.json`
+
 ### 1.2.0
-* Merge pull reuqest #10 adding a prefix and forward option
+* Merge pull request #10 adding a prefix and forward option
 * Update to latest dependencies
 * Publish on NPM
 
